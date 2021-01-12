@@ -1,12 +1,9 @@
 #input-możemy pobierać do zmiennej to, co użytkownik wpisze z klawiatury
 
-a = input("Podaj liczbe a :")
-b = input("Podaj liczbe b :")
+a = int(input("Podaj liczbe a :"))
+b = int(input("Podaj liczbe b :"))
 
-if (a  or b ==0 ):
-    print("Jedna z liczb wynosi 0, nie można wykonać dzielenia")
-
-else:
+if (a!=0 and b !=0 ):
     plus = int(a) + int(b)
     minus1 = int(a) - int(b)
     minus2 = int(b) - int(a)
@@ -21,6 +18,9 @@ else:
     print(("Dzielenie a/b:"), dzie1)
     print(("Dzielenie b/a:"), dzie2)
 
+
+else:
+    print("Jedna z liczb wynosi 0, nie można wykonać dzielenia")
 
 
 """Operatory Logiczne
