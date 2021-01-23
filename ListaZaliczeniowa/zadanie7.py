@@ -25,7 +25,7 @@
 # print(lista2)
 #
 
-def czy_przestepny(R):
+def czy_przestepny(R): #Rok przestępny jest raz na 4 lata ( W 2016, 2020 , 2024 itp )
     if R % 4 == 0 and R % 100 != 0:
         return True
     elif R % 400 == 0:
@@ -73,7 +73,7 @@ def data_wczoraj(D, M, R):
     return nowy_dzien, nowy_miesiac, nowy_rok
 
 
-#http://cybermoon.pl/wiedza/algorithms/wielkanoc.html
+
 def wielkanoc(y):
     a = y % 19
     b = y % 4

@@ -1,4 +1,4 @@
-#https://poradnikprzedsiebiorcy.pl/-jak-wyliczac-wynagrodzenia
+#https://poradnikprzedsiebiorcy.pl/-jak-wyliczac-wynagrodzenia - z tej strony czerpałam informację
 #ubezpieczenie emerytalne, rentowe, chorobowe, zdrowotne, zaliczka na PIT
 
 #odjęcie od otrzymanego podatku kwoty wolnej od podatku, kwota ta jest ustanowiona ustawowo i jej miesięczna wysokość wynosi 43,76 zł
@@ -16,8 +16,12 @@ def oblicz_netto(kwota_brutto):
     if zaliczka < 0:
         zaliczka = 0
 
-    return round(kwota_brutto - (emerytalna + rentowa + chorobowa + zdrowotna + zaliczka), 2)
+    return round(kwota_brutto - (emerytalna + rentowa + chorobowa + zdrowotna + zaliczka), 2) #zaokrąglam do dwóch miejsc po przecinku
 
 
-kwota = float(input("Podaj kwote brutto: "))
-print(f"Kwota netto wynosi: {oblicz_netto(kwota)}")
+if __name__ == "__main__":
+
+    kwota = float(input("Podaj kwote brutto: "))
+    print(f"Kwota netto wynosi: {oblicz_netto(kwota)} zł")
+    zabiera = kwota - oblicz_netto(kwota)
+    print(f"Oddajesz Państwu  {zabiera} zł  :( ")
