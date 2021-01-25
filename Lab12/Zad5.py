@@ -1,3 +1,4 @@
+
 def run():
     while True:
         try:
@@ -6,7 +7,7 @@ def run():
             continue
         else:
             if masa < 0:
-                print("Wprowadziłeś niewłaściwą wagę ")
+                print("Niewłaściwa wartość")
                 continue
             else:
                 break
@@ -18,7 +19,7 @@ def run():
             continue
         else:
             if wzrost < 0:
-                print("Wprowadziłeś niewłaściwy wzrost")
+                print("Niewłaściwa wartość")
                 continue
             else:
                 break
@@ -26,11 +27,11 @@ def run():
     bmi = masa / (wzrost * wzrost)
 
     if bmi < 18.5:
-        print(f"Masz niedowagę, Twoje BMI wynosi : {bmi}" )
+        print("Masz niedowagę.")
     elif 18.5 <= bmi < 25:
-        print(f"Twoja waga jest prawidłowa, Twoje BMI wynosi {bmi}")
+        print("Twoja waga jest prawidłowa")
     elif 25 <= bmi < 30:
-        print(f"Masz nadwagę, Twoje BMI wynosi : {bmi}")
+        print("Masz nadwagę!!!")
 
 
 run()
